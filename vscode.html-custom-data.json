@@ -19,6 +19,16 @@
           "name": "disabled",
           "description": "Disables the switch",
           "values": []
+        },
+        {
+          "name": "label-position",
+          "description": "Determines the placement of the label in relation to the switch",
+          "values": [
+            { "name": "top" },
+            { "name": "start" },
+            { "name": "end" },
+            { "name": "bottom" }
+          ]
         }
       ]
     }

@@ -4,7 +4,12 @@ import "./index";
 export default {
   title: "Components/Switch",
   component: "my-switch",
-  argTypes: {},
+  argTypes: {
+    labelPosition: {
+      control: { type: "radio" },
+      options: ['top', 'start', 'end', 'bottom']
+    }
+  },
   parameters: {
     actions: {
       handles: ['switch-change'],
@@ -13,10 +18,11 @@ export default {
 };
 
 const DefaultTemplate = (args: any) => {
-  return html` <my-switch label="${args.label}" ?checked=${args.checked} ?disabled=${args.disabled}></my-switch> `;
+  return html` <my-switch label="${args.label}" ?checked=${args.checked} ?disabled=${args.disabled} label-position=${args.labelPosition}></my-switch> `;
 };
 
 export const Default: any = DefaultTemplate.bind({});
 Default.args = {
-  label: 'Test'
+  label: 'Test',
+  labelPosition: 'top'
 };

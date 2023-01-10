@@ -25,6 +25,11 @@
               "name": "disabled",
               "description": "Disables the switch",
               "value": { "type": "boolean" }
+            },
+            {
+              "name": "label-position",
+              "description": "Determines the placement of the label in relation to the switch",
+              "value": { "type": "'top' | 'start' | 'end' | 'bottom'" }
             }
           ],
           "js": {
@@ -43,6 +48,11 @@
                 "name": "disabled",
                 "description": "Disables the switch",
                 "value": { "type": "boolean" }
+              },
+              {
+                "name": "label-position",
+                "description": "Determines the placement of the label in relation to the switch",
+                "value": { "type": "'top' | 'start' | 'end' | 'bottom'" }
               }
             ],
             "events": [
