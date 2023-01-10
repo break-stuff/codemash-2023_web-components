@@ -8,7 +8,7 @@ export default {
     label: {
       control: { type: "text" },
     },
-    '--size': {
+    "--size": {
       control: { type: "text" },
     },
     labelPosition: {
@@ -46,28 +46,30 @@ Default.args = {
   "--size": "1rem",
 };
 
-
 const ExternalInteractionTemplate = () => {
   return html`
     <button class="toggle-button">Toggle</button>
-    <br>
-    <br>
+    <br />
+    <br />
     <my-switch label="Toggle Example"></my-switch>
     <script>
-      const button = document.querySelector('.toggle-button');
-      const mySwitch = document.querySelector('my-switch');
+      const button = document.querySelector(".toggle-button");
+      const mySwitch = document.querySelector("my-switch");
 
-      button.addEventListener('click', () => mySwitch.toggle());
+      button.addEventListener("click", () => mySwitch.toggle());
     </script>
   `;
-}
+};
 
 export const ExternalInteraction: any = ExternalInteractionTemplate.bind({});
 ExternalInteraction.args = {};
 
 const IconDemoTemplate = () => {
   return html`
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
 
     <style>
       my-switch {
@@ -78,8 +80,31 @@ const IconDemoTemplate = () => {
       <i class="bi bi-emoji-smile" slot="unchecked"></i>
       <i class="bi bi-emoji-smile-fill" slot="checked"></i>
     </my-switch>
-  `
-}
+  `;
+};
 
 export const IconDemo: any = IconDemoTemplate.bind({});
 IconDemo.args = {};
+
+const PartsDemoTemplate = () => {
+  return html`
+    <style>
+      my-switch::part(control) {
+        background-color: pink;
+        padding: 1rem;
+      }
+
+      my-switch::part(track) {
+        border-radius: 0;
+      }
+
+      my-switch::part(switch) {
+        border-radius: 0;
+      }
+    </style>
+    <my-switch label="Parts Demo"> </my-switch>
+  `;
+};
+
+export const PartsDemo: any = PartsDemoTemplate.bind({});
+PartsDemo.args = {};

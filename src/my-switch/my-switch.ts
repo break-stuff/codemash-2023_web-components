@@ -85,10 +85,11 @@ export class MySwitch extends LitElement {
           aria-labelledby="switch-label"
           aria-checked="${this.checked}"
           ?disabled=${this.disabled}
+          part="control"
         >
           <slot name="${this.checked ? 'checked' : 'unchecked'}">
-            <div class="track">
-              <div class="switch"></div>
+            <div class="track" part="track">
+              <div class="switch" part="switch"></div>
             </div>
           </slot>
         </button>
