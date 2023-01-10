@@ -64,3 +64,22 @@ const ExternalInteractionTemplate = () => {
 
 export const ExternalInteraction: any = ExternalInteractionTemplate.bind({});
 ExternalInteraction.args = {};
+
+const IconDemoTemplate = () => {
+  return html`
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <style>
+      my-switch {
+        --size: 3rem;
+      }
+    </style>
+    <my-switch label="Icon Demo">
+      <i class="bi bi-emoji-smile" slot="unchecked"></i>
+      <i class="bi bi-emoji-smile-fill" slot="checked"></i>
+    </my-switch>
+  `
+}
+
+export const IconDemo: any = IconDemoTemplate.bind({});
+IconDemo.args = {};

@@ -1,7 +1,7 @@
 import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { styles } from "./my-switch.styles";
-import { styleMap } from 'lit/directives/style-map.js';
+import { styleMap } from "lit/directives/style-map.js";
 
 /**
  * Switches allow the user to toggle an option on or off.
@@ -9,8 +9,12 @@ import { styleMap } from 'lit/directives/style-map.js';
  * @tag my-switch
  *
  * @event switch-change - Emitted whenever the switch is toggled
- * 
+ *
  * @cssprop [--size=1rem] - Controls the size of the switch
+ * 
+ * @slot checked - Displayed when switched is checked
+ * @slot unchecked - Displayed when switched is unchecked
+ * 
  */
 @customElement("my-switch")
 export class MySwitch extends LitElement {
@@ -26,10 +30,14 @@ export class MySwitch extends LitElement {
   @property({ type: Boolean }) disabled: boolean = false;
 
   /** Determines the placement of the label in relation to the switch */
-  @property({ attribute: 'label-position' }) labelPosition: 'top' | 'start' | 'end' | 'bottom' = 'top';
+  @property({ attribute: "label-position" }) labelPosition:
+    | "top"
+    | "start"
+    | "end"
+    | "bottom" = "top";
 
   public toggle() {
-    if(this.disabled) {
+    if (this.disabled) {
       return;
     }
 
@@ -38,35 +46,51 @@ export class MySwitch extends LitElement {
   }
 
   private emitChange() {
-    this.dispatchEvent(new CustomEvent('switch-change', {
-      detail: {
-        checked: this.checked
-      },
-      bubbles: true
-    }))
+    this.dispatchEvent(
+      new CustomEvent("switch-change", {
+        detail: {
+          checked: this.checked,
+        },
+        bubbles: true,
+      })
+    );
   }
 
   private positionMapper() {
-    return {
-      top: 'column',
-      start: 'row',
-      end: 'row-reverse',
-      bottom: 'column-reverse'
-    }[this.labelPosition] || 'column';
+    return (
+      {
+        top: "column",
+        start: "row",
+        end: "row-reverse",
+        bottom: "column-reverse",
+      }[this.labelPosition] || "column"
+    );
   }
 
   render() {
     return html`
-      <div class="base" style="${styleMap({
-        display: 'flex',
-        justifyContent: 'space-between',
-        flexDirection: this.positionMapper()
-      })}">
+      <div
+        class="base"
+        style="${styleMap({
+          display: "flex",
+          justifyContent: "space-between",
+          flexDirection: this.positionMapper(),
+        })}"
+      >
         <label id="switch-label">${this.label}</label>
-        <button role="switch" class="control" @click=${this.toggle} aria-labelledby="switch-label" aria-checked="${this.checked}" ?disabled=${this.disabled}>
-          <div class="track">
-            <div class="switch"></div>
-          </div>
+        <button
+          role="switch"
+          class="control"
+          @click=${this.toggle}
+          aria-labelledby="switch-label"
+          aria-checked="${this.checked}"
+          ?disabled=${this.disabled}
+        >
+          <slot name="${this.checked ? 'checked' : 'unchecked'}">
+            <div class="track">
+              <div class="switch"></div>
+            </div>
+          </slot>
         </button>
       </div>
     `;
