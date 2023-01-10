@@ -7,6 +7,15 @@ export const styles = css`
   border: 0;
 }
 
+[disabled] {
+  cursor: not-allowed;
+}
+
+[disabled] .track {
+  background-color: lightgray;
+  border-color: lightgray;
+}
+
 .track {
   width: 2rem;
   height: 1rem;

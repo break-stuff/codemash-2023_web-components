@@ -20,6 +20,11 @@
               "name": "checked",
               "description": "Indicates if the switch is on or off",
               "value": { "type": "boolean" }
+            },
+            {
+              "name": "disabled",
+              "description": "Disables the switch",
+              "value": { "type": "boolean" }
             }
           ],
           "js": {
@@ -32,6 +37,11 @@
               {
                 "name": "checked",
                 "description": "Indicates if the switch is on or off",
+                "value": { "type": "boolean" }
+              },
+              {
+                "name": "disabled",
+                "description": "Disables the switch",
                 "value": { "type": "boolean" }
               }
             ],

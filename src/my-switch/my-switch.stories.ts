@@ -13,7 +13,7 @@ export default {
 };
 
 const DefaultTemplate = (args: any) => {
-  return html` <my-switch label="${args.label}" ?checked=${args.checked}></my-switch> `;
+  return html` <my-switch label="${args.label}" ?checked=${args.checked} ?disabled=${args.disabled}></my-switch> `;
 };
 
 export const Default: any = DefaultTemplate.bind({});
