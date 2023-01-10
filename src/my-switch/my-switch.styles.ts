@@ -24,7 +24,7 @@ export const styles = css`
 .track {
   width: calc(var(--size) * 2);
   height: var(--size);
-  background-color: var(--primary-color);
+  background-color: teal;
   border-radius: var(--size);
   border: solid teal calc(var(--size) / 8);
 }

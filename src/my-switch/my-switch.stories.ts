@@ -45,3 +45,22 @@ Default.args = {
   labelPosition: "top",
   "--size": "1rem",
 };
+
+
+const ExternalInteractionTemplate = () => {
+  return html`
+    <button class="toggle-button">Toggle</button>
+    <br>
+    <br>
+    <my-switch label="Toggle Example"></my-switch>
+    <script>
+      const button = document.querySelector('.toggle-button');
+      const mySwitch = document.querySelector('my-switch');
+
+      button.addEventListener('click', () => mySwitch.toggle());
+    </script>
+  `;
+}
+
+export const ExternalInteraction: any = ExternalInteractionTemplate.bind({});
+ExternalInteraction.args = {};
