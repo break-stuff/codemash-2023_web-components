@@ -8,7 +8,7 @@
       "elements": [
         {
           "name": "my-switch",
-          "description": "Switches allow the user to toggle an option on or off.\n\n**Events:**\n - **switch-change** - Emitted whenever the switch is toggled",
+          "description": "Switches allow the user to toggle an option on or off.\n\n**Events:**\n - **switch-change** - Emitted whenever the switch is toggled\n\n**CSS Properties:**\n - **--size** - Controls the size of the switch _(default: 1rem)_",
           "doc-url": "",
           "attributes": [
             {
@@ -66,7 +66,9 @@
       ]
     },
     "css": {
-      "properties": [],
+      "properties": [
+        { "name": "--size", "description": "Controls the size of the switch" }
+      ],
       "pseudo-elements": []
     }
   }

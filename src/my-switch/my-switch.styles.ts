@@ -2,6 +2,7 @@ import { css } from 'lit';
 
 export const styles = css`
 :host {
+  --size: 1rem;
   display: inline-block;
 }
 
@@ -21,17 +22,17 @@ export const styles = css`
 }
 
 .track {
-  width: 2rem;
-  height: 1rem;
-  background-color: teal;
-  border-radius: 1rem;
-  border: solid teal 0.125rem;
+  width: calc(var(--size) * 2);
+  height: var(--size);
+  background-color: var(--primary-color);
+  border-radius: var(--size);
+  border: solid teal calc(var(--size) / 8);
 }
 
 .switch {
-  width: 1rem;
-  height: 1rem;
-  border-radius: 1rem;
+  width: var(--size);
+  height: var(--size);
+  border-radius: var(--size);
   background-color: white;
 }
 

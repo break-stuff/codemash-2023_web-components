@@ -9,6 +9,8 @@ import { styleMap } from 'lit/directives/style-map.js';
  * @tag my-switch
  *
  * @event switch-change - Emitted whenever the switch is toggled
+ * 
+ * @cssprop [--size=1rem] - Controls the size of the switch
  */
 @customElement("my-switch")
 export class MySwitch extends LitElement {
