@@ -57,6 +57,7 @@ export class MySwitch extends LitElement {
     return html`
       <div class="base" style="${styleMap({
         display: 'flex',
+        justifyContent: 'space-between',
         flexDirection: this.positionMapper()
       })}">
         <label id="switch-label">${this.label}</label>

@@ -1,6 +1,10 @@
 import { css } from 'lit';
 
 export const styles = css`
+:host {
+  display: inline-block;
+}
+
 .control {
   padding: 0;
   background-color: transparent;
