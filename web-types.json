@@ -8,7 +8,7 @@
       "elements": [
         {
           "name": "my-switch",
-          "description": "Switches allow the user to toggle an option on or off.",
+          "description": "Switches allow the user to toggle an option on or off.\n\n**Events:**\n - **switch-change** - Emitted whenever the switch is toggled",
           "doc-url": "",
           "attributes": [
             {
@@ -16,7 +16,11 @@
               "description": "This is used to describe the switch",
               "value": { "type": "string | undefined" }
             },
-            { "name": "checked", "value": { "type": "boolean" } }
+            {
+              "name": "checked",
+              "description": "Indicates if the switch is on or off",
+              "value": { "type": "boolean" }
+            }
           ],
           "js": {
             "properties": [
@@ -25,9 +29,18 @@
                 "description": "This is used to describe the switch",
                 "value": { "type": "string | undefined" }
               },
-              { "name": "checked", "value": { "type": "boolean" } }
+              {
+                "name": "checked",
+                "description": "Indicates if the switch is on or off",
+                "value": { "type": "boolean" }
+              }
             ],
-            "events": []
+            "events": [
+              {
+                "name": "switch-change",
+                "description": "Emitted whenever the switch is toggled"
+              }
+            ]
           }
         }
       ]

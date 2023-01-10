@@ -3,14 +3,18 @@
   "tags": [
     {
       "name": "my-switch",
-      "description": "Switches allow the user to toggle an option on or off.",
+      "description": "Switches allow the user to toggle an option on or off.\n\n**Events:**\n - **switch-change** - Emitted whenever the switch is toggled",
       "attributes": [
         {
           "name": "label",
           "description": "This is used to describe the switch",
           "values": []
         },
-        { "name": "checked", "values": [] }
+        {
+          "name": "checked",
+          "description": "Indicates if the switch is on or off",
+          "values": []
+        }
       ]
     }
   ]

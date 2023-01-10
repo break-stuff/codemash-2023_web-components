@@ -7,7 +7,7 @@ export default {
   argTypes: {},
   parameters: {
     actions: {
-      handles: [],
+      handles: ['switch-change'],
     },
   },
 };
