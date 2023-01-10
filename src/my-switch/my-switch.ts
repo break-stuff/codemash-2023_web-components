@@ -15,6 +15,10 @@ import { styleMap } from "lit/directives/style-map.js";
  * @slot checked - Displayed when switched is checked
  * @slot unchecked - Displayed when switched is unchecked
  * 
+ * @csspart control - Controls the styles of the button element
+ * @csspart track - controls the style of the track
+ * @csspart switch - controls the styles of the switch
+ * 
  */
 @customElement("my-switch")
 export class MySwitch extends LitElement {

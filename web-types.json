@@ -8,7 +8,7 @@
       "elements": [
         {
           "name": "my-switch",
-          "description": "Switches allow the user to toggle an option on or off.\n\n**Slots:**\n - **checked** - Displayed when switched is checked\n- **unchecked** - Displayed when switched is unchecked\n\n**Events:**\n - **switch-change** - Emitted whenever the switch is toggled\n\n**CSS Properties:**\n - **--size** - Controls the size of the switch _(default: 1rem)_",
+          "description": "Switches allow the user to toggle an option on or off.\n\n**Slots:**\n - **checked** - Displayed when switched is checked\n- **unchecked** - Displayed when switched is unchecked\n\n**Events:**\n - **switch-change** - Emitted whenever the switch is toggled\n\n**CSS Properties:**\n - **--size** - Controls the size of the switch _(default: 1rem)_\n\n**CSS Parts:**\n - **control** - Controls the styles of the button element\n- **track** - controls the style of the track\n- **switch** - controls the styles of the switch",
           "doc-url": "",
           "attributes": [
             {
@@ -73,7 +73,20 @@
       "properties": [
         { "name": "--size", "description": "Controls the size of the switch" }
       ],
-      "pseudo-elements": []
+      "pseudo-elements": [
+        {
+          "name": "part(control)",
+          "description": "Controls the styles of the button element"
+        },
+        {
+          "name": "part(track)",
+          "description": "controls the style of the track"
+        },
+        {
+          "name": "part(switch)",
+          "description": "controls the styles of the switch"
+        }
+      ]
     }
   }
 }

@@ -7,5 +7,18 @@
       "values": []
     }
   ],
-  "pseudoElements": []
+  "pseudoElements": [
+    {
+      "name": "::part(control)",
+      "description": "Controls the styles of the button element"
+    },
+    {
+      "name": "::part(track)",
+      "description": "controls the style of the track"
+    },
+    {
+      "name": "::part(switch)",
+      "description": "controls the styles of the switch"
+    }
+  ]
 }
