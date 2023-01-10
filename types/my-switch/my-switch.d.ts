@@ -1,4 +1,4 @@
-import { LitElement } from 'lit';
+import { LitElement } from "lit";
 /**
  * Switches allow the user to toggle an option on or off.
  *
@@ -7,10 +7,13 @@ import { LitElement } from 'lit';
  */
 export declare class MySwitch extends LitElement {
     static styles: import("lit").CSSResult;
+    /** This is used to describe the switch */
+    label?: string;
+    checked: boolean;
     render(): import("lit-html").TemplateResult<1>;
 }
 declare global {
     interface HTMLElementTagNameMap {
-        'my-switch': MySwitch;
+        "my-switch": MySwitch;
     }
 }

@@ -4,7 +4,14 @@
     {
       "name": "my-switch",
       "description": "Switches allow the user to toggle an option on or off.",
-      "attributes": []
+      "attributes": [
+        {
+          "name": "label",
+          "description": "This is used to describe the switch",
+          "values": []
+        },
+        { "name": "checked", "values": [] }
+      ]
     }
   ]
 }

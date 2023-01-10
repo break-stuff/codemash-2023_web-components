@@ -10,8 +10,25 @@
           "name": "my-switch",
           "description": "Switches allow the user to toggle an option on or off.",
           "doc-url": "",
-          "attributes": [],
-          "js": { "properties": [], "events": [] }
+          "attributes": [
+            {
+              "name": "label",
+              "description": "This is used to describe the switch",
+              "value": { "type": "string | undefined" }
+            },
+            { "name": "checked", "value": { "type": "boolean" } }
+          ],
+          "js": {
+            "properties": [
+              {
+                "name": "label",
+                "description": "This is used to describe the switch",
+                "value": { "type": "string | undefined" }
+              },
+              { "name": "checked", "value": { "type": "boolean" } }
+            ],
+            "events": []
+          }
         }
       ]
     },

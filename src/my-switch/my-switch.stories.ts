@@ -12,9 +12,11 @@ export default {
   },
 };
 
-const DefaultTemplate = () => {
-  return html` <my-switch></my-switch> `;
+const DefaultTemplate = (args: any) => {
+  return html` <my-switch label="${args.label}" ?checked=${args.checked}></my-switch> `;
 };
 
 export const Default: any = DefaultTemplate.bind({});
-Default.args = {};
+Default.args = {
+  label: 'Test'
+};
